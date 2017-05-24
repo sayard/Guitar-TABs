@@ -17,7 +17,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/enter_a_song_name"/>
+            android:hint="@string/enter_artist_and_song_name"/>
 
         <Button
             android:id="@+id/search_button"

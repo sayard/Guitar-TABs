@@ -2,4 +2,5 @@
     <string name="app_name">Guitar TABs</string>
     <string name="enter_a_song_name">Enter a song name</string>
     <string name="search">Search</string>
+    <string name="enter_artist_and_song_name">Enter artist and song name</string>
 </resources>
