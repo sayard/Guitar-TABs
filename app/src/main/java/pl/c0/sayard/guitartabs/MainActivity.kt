@@ -2,11 +2,12 @@ package pl.c0.sayard.guitartabs
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        TabsCrawlerTask(this, this).execute("https://www.ultimate-guitar.com/search.php?search_type=title&order=&value=revenga")
     }
 }
