@@ -18,8 +18,8 @@ import org.jsoup.select.Elements
  */
 class TabsCrawlerTask constructor(val activity: Activity, val context: Context): AsyncTask<String, Void, Elements>() {
 
-    var progressBar: ProgressBar = activity.findViewById(R.id.progress_bar) as ProgressBar
-    var errorMessage: TextView = activity.findViewById(R.id.error_message) as TextView
+    val progressBar = activity.findViewById(R.id.progress_bar) as ProgressBar
+    val errorMessage = activity.findViewById(R.id.error_message) as TextView
 
     override fun onPreExecute() {
         progressBar.visibility = View.VISIBLE

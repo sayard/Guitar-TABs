@@ -4,4 +4,6 @@
     <string name="search">Search</string>
     <string name="enter_artist_and_song_name">Enter artist and song name</string>
     <string name="could_not_find_any_tabs_try_again">Could not find any tabs. Try again.</string>
+    <string name="extra_tab_link" translatable="false">pl.0c.sayard.guitartabs.extra.TAB_LINK</string>
+    <string name="could_not_display_tab_try_again">Could not display tab. Try again.</string>
 </resources>

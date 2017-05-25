@@ -1,6 +1,7 @@
 package pl.c0.sayard.guitartabs
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -34,12 +35,14 @@ class TabsAdapter(private val context: Context, elements: Elements) : RecyclerVi
         viewHolder.tabName.text = info.name
         viewHolder.tabType.text = info.type
 
-        viewHolder.tabName.setOnClickListener {
-            Toast.makeText(context, info.link, Toast.LENGTH_SHORT).show()
+        val onClickListener = View.OnClickListener {
+            val intent: Intent = Intent(context, TabDisplayActivity::class.java)
+            intent.putExtra(context.getString(R.string.extra_tab_link), info.link)
+            context.startActivity(intent)
         }
-        viewHolder.tabType.setOnClickListener {
-            Toast.makeText(context, info.link, Toast.LENGTH_SHORT).show()
-        }
+
+        viewHolder.tabName.setOnClickListener(onClickListener)
+        viewHolder.tabType.setOnClickListener(onClickListener)
     }
 
     override fun getItemCount(): Int {
@@ -48,8 +51,8 @@ class TabsAdapter(private val context: Context, elements: Elements) : RecyclerVi
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        internal var tabName: TextView = itemView.findViewById(R.id.tab_name_text_view) as TextView
-        internal var tabType: TextView = itemView.findViewById(R.id.tab_type_text_view) as TextView
+        internal var tabName = itemView.findViewById(R.id.tab_name_text_view) as TextView
+        internal var tabType = itemView.findViewById(R.id.tab_type_text_view) as TextView
 
     }
 }
