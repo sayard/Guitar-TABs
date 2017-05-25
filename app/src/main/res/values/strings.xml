@@ -3,4 +3,5 @@
     <string name="enter_a_song_name">Enter a song name</string>
     <string name="search">Search</string>
     <string name="enter_artist_and_song_name">Enter artist and song name</string>
+    <string name="could_not_find_any_tabs_try_again">Could not find any tabs. Try again.</string>
 </resources>

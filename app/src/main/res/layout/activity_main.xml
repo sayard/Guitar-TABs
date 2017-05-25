@@ -33,6 +33,14 @@
         android:layout_height="match_parent"
         android:visibility="gone" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/could_not_find_any_tabs_try_again"
+        android:visibility="gone"
+        android:id="@+id/error_message"/>
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
