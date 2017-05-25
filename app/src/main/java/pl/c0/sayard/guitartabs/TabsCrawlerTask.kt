@@ -5,8 +5,10 @@ import android.content.Context
 import android.os.AsyncTask
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
+import org.jsoup.HttpStatusException
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.select.Elements
@@ -23,11 +25,15 @@ class TabsCrawlerTask constructor(val activity: Activity, val context: Context):
         progressBar.visibility = View.VISIBLE
     }
 
-    override fun doInBackground(vararg params: String?): Elements {
-        val primaryDocument: Document = Jsoup.connect(params[0]).get()
-        val html: String = primaryDocument.getElementsByClass("search-version--link").html()
-        val elements: Elements = Jsoup.parse(html).select("a")
-        return elements
+    override fun doInBackground(vararg params: String?): Elements? {
+        try{
+            val primaryDocument: Document = Jsoup.connect(params[0]).get()
+            val html: String = primaryDocument.getElementsByClass("search-version--link").html()
+            val elements: Elements = Jsoup.parse(html).select("a")
+            return elements
+        }catch (e: HttpStatusException){
+            return null
+        }
     }
 
     override fun onPostExecute(results: Elements?) {
