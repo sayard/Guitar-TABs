@@ -1,4 +1,4 @@
-package pl.c0.sayard.guitartabs
+package pl.c0.sayard.guitartabs.networking
 
 import android.app.Activity
 import android.os.AsyncTask
@@ -9,6 +9,7 @@ import org.jsoup.HttpStatusException
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
+import pl.c0.sayard.guitartabs.R
 
 /**
  * Created by Karol on 25.05.2017.

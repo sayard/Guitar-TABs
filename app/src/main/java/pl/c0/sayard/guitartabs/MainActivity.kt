@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import pl.c0.sayard.guitartabs.networking.TabsCrawlerTask
 
 class MainActivity : AppCompatActivity() {
 
